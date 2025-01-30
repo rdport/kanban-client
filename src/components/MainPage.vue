@@ -125,7 +125,7 @@ export default {
     },
     fetchCategories() {
       axios({
-        url: `http://localhost:3000/categories`,
+        url: `https://kanban-server-rdport.onrender.com/categories`,
         method: "POST",
         withCredentials: true,
         headers: {
@@ -141,7 +141,7 @@ export default {
     },
     fetchTasks() {
       axios({
-          url: `http://localhost:3000/tasks`,
+          url: `https://kanban-server-rdport.onrender.com/tasks`,
           method: "POST",
           withCredentials: true,
           headers: {

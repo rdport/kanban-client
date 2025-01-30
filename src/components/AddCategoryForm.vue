@@ -58,7 +58,7 @@ export default {
   methods: {
     addCategory() {
       axios({
-          url: "http://localhost:3000/categories/add",
+          url: "https://kanban-server-rdport.onrender.com/categories/add",
           method: "POST",
           withCredentials: true,
           headers: {

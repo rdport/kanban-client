@@ -104,7 +104,7 @@ export default {
     },
     fetchEditData(TaskId) {
       axios({
-          url: `http://localhost:3000/tasks/${TaskId}`,
+          url: `https://kanban-server-rdport.onrender.com/tasks/${TaskId}`,
           method: "POST",
           withCredentials: true,
           headers: {

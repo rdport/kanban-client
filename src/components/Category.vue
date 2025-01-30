@@ -76,7 +76,7 @@ export default {
     },
     fetchEditData(CategoryId) {
       axios({
-          url: `http://localhost:3000/categories/${CategoryId}`,
+          url: `https://kanban-server-rdport.onrender.com/categories/${CategoryId}`,
           method: "POST",
           withCredentials: true,
           headers: {
@@ -116,7 +116,7 @@ export default {
     newTask(event) {
       if (this.chosenTaskData.CategoryId !== Number(event.to.id)) {
         axios({
-          url: `http://localhost:3000/tasks/${this.chosenTaskData.id}`,
+          url: `https://kanban-server-rdport.onrender.com/tasks/${this.chosenTaskData.id}`,
           method: "PATCH",
           withCredentials: true,
           headers: {

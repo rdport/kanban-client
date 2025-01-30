@@ -40,7 +40,7 @@ export default {
   methods: {
     deleteTask() {
       axios({
-          url: `http://localhost:3000/tasks/${this.TaskId}`,
+          url: `https://kanban-server-rdport.onrender.com/tasks/${this.TaskId}`,
           method: "DELETE",
           withCredentials: true,
           headers: {

@@ -41,7 +41,7 @@ export default {
   methods: {
     deleteCategory() {
       axios({
-          url: `http://localhost:3000/categories/${this.CategoryId}`,
+          url: `https://kanban-server-rdport.onrender.com/categories/${this.CategoryId}`,
           method: "DELETE",
           withCredentials: true,
           headers: {

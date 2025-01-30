@@ -54,7 +54,7 @@ export default {
   methods: {
     editCategory() {
       axios({
-          url: `http://localhost:3000/categories/${this.CategoryId}`,
+          url: `https://kanban-server-rdport.onrender.com/categories/${this.CategoryId}`,
           method: "PUT",
           withCredentials: true,
           headers: {

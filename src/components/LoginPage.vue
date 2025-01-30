@@ -66,7 +66,7 @@ export default {
   methods: {
     login(){
       axios({
-        url: "http://localhost:3000/login",
+        url: "https://kanban-server-rdport.onrender.com/login",
         method: "POST",
         withCredentials: true,
         data: this.userLogin
@@ -98,7 +98,7 @@ export default {
     // handleCredentialResponse(googleUser) {
     //   var googleToken = googleUser.getAuthResponse().id_token;
     //   axios({
-    //       url: "http://localhost:3000/googleLogin",
+    //       url: "https://kanban-server-rdport.onrender.com/googleLogin",
     //       method: "POST",
     //       withCredentials: true,
     //       data: {

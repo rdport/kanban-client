@@ -54,7 +54,7 @@ export default {
   methods: {
     editTask() {
       axios({
-          url: `http://localhost:3000/tasks/${this.TaskId}`,
+          url: `https://kanban-server-rdport.onrender.com/tasks/${this.TaskId}`,
           method: "PUT",
           withCredentials: true,
           headers: {

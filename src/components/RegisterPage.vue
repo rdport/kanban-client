@@ -69,7 +69,7 @@ export default {
   methods: {
     register() {
       axios({
-        url: "http://localhost:3000/register",
+        url: "https://kanban-server-rdport.onrender.com/register",
         method: "POST",
         withCredentials: true,
         data: this.userRegister

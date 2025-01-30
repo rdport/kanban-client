@@ -56,7 +56,7 @@ export default {
       this.task.CategoryId = this.CategoryId;
       console.log(this.task.due_date, "<<<<<<<<<<<<AddtaskComponent");
       axios({
-          url: "http://localhost:3000/tasks/add",
+          url: "https://kanban-server-rdport.onrender.com/tasks/add",
           method: "POST",
           withCredentials: true,
           headers: {
