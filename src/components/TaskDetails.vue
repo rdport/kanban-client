@@ -81,7 +81,7 @@ export default {
           }
           this.error = true;
           this.$nextTick(()=> {
-            console.log(this.$refs.error)
+            // console.log(this.$refs.error)
              this.$refs.error[0].$el.scrollIntoView();
           });
       })

@@ -54,7 +54,6 @@ export default {
   methods: {
     addTask() {
       this.task.CategoryId = this.CategoryId;
-      console.log(this.task.due_date, "<<<<<<<<<<<<AddtaskComponent");
       axios({
           url: "https://kanban-server-rdport.onrender.com/tasks/add",
           method: "POST",
@@ -79,7 +78,7 @@ export default {
           this.messages = err.response.data.messages;
           this.error = true;
           this.$nextTick(()=> {
-            console.log(this.$refs.error)
+            // console.log(this.$refs.error)
              this.$refs.error[0].$el.scrollIntoView();
           });
       })

@@ -83,11 +83,11 @@ export default {
           );
       })
       .catch((err) => {
-          console.log(err.response.data.messages);
+          console.log(err);
           this.messages = err.response.data.messages;
           this.error = true;
           this.$nextTick(()=> {
-            console.log(this.$refs.error)
+            // console.log(this.$refs.error)
              this.$refs.error[0].$el.scrollIntoView();
           });
       })

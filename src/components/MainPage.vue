@@ -170,7 +170,6 @@ export default {
       this.categoryEditData = categoryEditData;
     },
     setSearchKey(searchKey) {
-      console.log(searchKey)
       this.searchKey = searchKey;
     },
     closeTaskDetails() {

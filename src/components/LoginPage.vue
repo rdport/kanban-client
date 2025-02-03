@@ -55,12 +55,6 @@ export default {
       },
       error: false,
       message: "",
-      // params: {
-      //     client_id:
-      // },
-      // renderParams: {
-      //     width: 250
-      // }
     }
   },
   methods: {

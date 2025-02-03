@@ -67,7 +67,6 @@ export default {
     logout() {
       this.changePage("login-page");
       localStorage.clear();
-
       // Vue.GoogleAuth.then(auth2 => {
       //   auth2.signOut().then(function() {
       //     console.log('User signed out.');
