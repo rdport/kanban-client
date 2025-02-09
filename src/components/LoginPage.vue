@@ -1,10 +1,15 @@
 <template>
   <div>
-    <div id="notification-container" v-if="error">
+    <div id="notification-container" v-if="error && !loading">
           <ErrorMessage :message="message" ref="error"></ErrorMessage>
     </div>
     <div id="login-page" class="">
-        <div class="register-login-content center-viewport">
+        <div v-if="loading" class="center-viewport">
+          <div id="loadingMask" class="center-viewport" style="background: #fff;">
+            <img class="img-fluid" src="../assets/loading-spinning-orange.gif">
+          </div>
+        </div>
+        <div v-if ="!loading" class="register-login-content center-viewport">
             <div class="login-image-container">
                 <img class="kanban-logo-login" src="../assets/kanban-logo.svg" alt="kanban board" width="250">
             </div>
@@ -54,11 +59,13 @@ export default {
         password: ""
       },
       error: false,
+      loading: false,
       message: "",
     }
   },
   methods: {
     login(){
+      this.loading = true;
       axios({
         url: "https://kanban-server-rdport.onrender.com/login",
         method: "POST",
@@ -75,8 +82,10 @@ export default {
               "Welcome!",
               'success'
           );
+          this.loading=false;
       })
       .catch((err) => {
+          this.loading=false;
           console.log(err);
           this.message = err.response.data.message;
           this.error = true;
