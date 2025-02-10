@@ -3,12 +3,12 @@
     <div id="notification-container" v-if="error && !loading">
           <ErrorMessage :message="message" ref="error"></ErrorMessage>
     </div>
+    <div v-if="loading" class="">
+      <div id="loadingMask" class="center-viewport" style="background: #fff;">
+        <img class="img-fluid" src="../assets/loading-spinning-orange.gif">
+      </div>
+    </div>
     <div id="login-page" class="">
-        <div v-if="loading" class="center-viewport">
-          <div id="loadingMask" class="center-viewport" style="background: #fff;">
-            <img class="img-fluid" src="../assets/loading-spinning-orange.gif">
-          </div>
-        </div>
         <div v-if ="!loading" class="register-login-content center-viewport">
             <div class="login-image-container">
                 <img class="kanban-logo-login" src="../assets/kanban-logo.svg" alt="kanban board" width="250">
@@ -82,7 +82,7 @@ export default {
               "Welcome!",
               'success'
           );
-          this.loading=false;
+          this.loading = false;
       })
       .catch((err) => {
           this.loading=false;
