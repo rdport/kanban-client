@@ -8,7 +8,7 @@
         <img class="img-fluid" src="../assets/loading-spinning-orange.gif">
       </div>
     </div>
-     <div id="register-page" v-if ="!loading">
+     <div id="register-page" v-if="!loading">
             <div class="register-login-content" id="register-content">
                 <div class="register-image-container">
                     <img src="../assets/kanban-logo.svg" alt="kanban board" width="250">
