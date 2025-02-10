@@ -8,8 +8,8 @@
         <img class="img-fluid" src="../assets/loading-spinning-orange.gif">
       </div>
     </div>
-    <div id="login-page" class="">
-        <div v-if ="!loading" class="register-login-content center-viewport">
+    <div id="login-page" class=""  v-if ="!loading">
+        <div class="register-login-content center-viewport">
             <div class="login-image-container">
                 <img class="kanban-logo-login" src="../assets/kanban-logo.svg" alt="kanban board" width="250">
             </div>

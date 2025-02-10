@@ -1,9 +1,14 @@
 <template>
   <div>
-    <div id="notification-container" sv-if="error">
+    <div id="notification-container" v-if="error && !loading">
           <ErrorMessage v-for="(message, index) in messages" :key="index" :message="message" ref="error"></ErrorMessage>
     </div>
-     <div id="register-page">
+    <div v-if="loading" class="">
+      <div id="loadingMask" class="center-viewport" style="background: #fff;">
+        <img class="img-fluid" src="../assets/loading-spinning-orange.gif">
+      </div>
+    </div>
+     <div id="register-page" v-if ="!loading">
             <div class="register-login-content" id="register-content">
                 <div class="register-image-container">
                     <img src="../assets/kanban-logo.svg" alt="kanban board" width="250">
@@ -63,11 +68,13 @@ export default {
         password: ""
       },
       error: false,
+      loading: false,
       messages: []
     }
   },
   methods: {
     register() {
+      this.loading = true;
       axios({
         url: "https://kanban-server-rdport.onrender.com/register",
         method: "POST",
@@ -81,8 +88,10 @@ export default {
               "Please log in!",
               "success"
           );
+          this.loading = false;
       })
       .catch((err) => {
+          this.loading = false;
           console.log(err);
           this.messages = err.response.data.messages;
           this.error = true;
