@@ -97,6 +97,15 @@
                 <div class="description">
                   <h2>Description</h2>
                   <p>A web application for managing tasks and workflow.</p>
+                  <p>The following users have been added to the database:</p>
+                  <p class="mb-0" style="font-weight:bold">John Doe</p>
+                  email: johndoe@mail.com<br>
+                  password: 123456<br>
+                  <br>
+                  <p class="mb-0" style="font-weight:bold">Jane Doe</p>
+                  email: janedoe@mail.com<br>
+                  password: 123456<br>
+                  <br>
                   <h2>Github</h2>
                   <ul>
                       <li><a href='https://github.com/rdport/kanban-client.git'>kanban-client</a></li>
